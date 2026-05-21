@@ -1,0 +1,107 @@
+{
+  "version": 2,
+  "kind": "duckx-theme",
+  "theme": {
+    "type": "Light",
+    "accent": "#f7995e",
+    "canvas": {
+      "bg": "#f2f2f7",
+      "grid": "#d8d8dc"
+    },
+    "panel": {
+      "bg": "#ffffff",
+      "opacity": 0.95,
+      "border": "#e5e5ea",
+      "border_opacity": 1.0,
+      "blur": 20.0
+    },
+    "panel_shadow_opacity": 0.1,
+    "modal": {
+      "bg": "#ffffff",
+      "opacity": 0.95,
+      "border": "#e5e5ea",
+      "border_opacity": 1.0
+    },
+    "shadow": {
+      "modal_blur": 48.0,
+      "floating_blur": 30.0,
+      "floating_x": 0.0,
+      "floating_y": 10.0,
+      "dock_x": 2.0,
+      "dock_y": 0.0,
+      "dock_blur": 12.0,
+      "modal_x": 0.0,
+      "modal_y": 16.0
+    },
+    "toolbar": {
+      "bg": "#ffffff"
+    },
+    "floating": {
+      "opacity": 1.0,
+      "border": "#e5e5ea",
+      "border_opacity": 1.0
+    },
+    "field": {
+      "bg": "#f2f2f7",
+      "border": "#e5e5ea",
+      "hover_bg": "#f2f2f7"
+    },
+    "text": {
+      "primary": "#40434c",
+      "secondary": "#6b6e78",
+      "muted": "#9b9ea8",
+      "active": "#f7995e"
+    },
+    "button": {
+      "bg": "#ffffff",
+      "bg_opacity": 0.64,
+      "border_idle": "#ffffff",
+      "hover_bg": "#f2f2f7",
+      "hover_bg_opacity": 0.5,
+      "border_hover": "#f2f2f7",
+      "active_bg": "#f7995e",
+      "active_bg_opacity": 0.1,
+      "border_active": "#fdebdf",
+      "danger_fg": "#6b7280",
+      "danger_border_idle": "#6b7280",
+      "danger_hover_bg": "#f11935",
+      "danger_border_hover": "#f11935",
+      "shadow_opacity": 0.1,
+      "idle_fg": "#6b6e78",
+      "active_fg": "#f7995e",
+      "danger_active_bg": "#d90f29",
+      "danger_hover_fg": "#ffffff",
+      "danger_active_fg": "#ffffff"
+    },
+    "handle": {
+      "handle_color": "#f7995e",
+      "handle_border": "#ebecef",
+      "selection_width": 2.0
+    },
+    "slider": {
+      "active_bg": "#f7995e",
+      "thumb_bg": "#ffffff",
+      "thumb_radius": 12.0
+    },
+    "switch": {
+      "active_bg": "#f7995e"
+    },
+    "scrollbar": {
+      "track": "#d8d8dc",
+      "thumb": "#f7995e",
+      "thumb_hover": "#ff7f6e"
+    },
+    "name": "Duckx Light",
+    "border": "#e5e5ea",
+    "titlebar": {
+      "button_hover_bg": "#e5e5ea"
+    },
+    "overlay": {
+      "color": "#ffffff",
+      "backdrop_opacity": 0.24
+    },
+    "snackbar": {
+      "bg": "#ffffff"
+    }
+  }
+}

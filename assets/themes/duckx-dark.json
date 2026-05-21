@@ -1,0 +1,107 @@
+{
+  "version": 2,
+  "kind": "duckx-theme",
+  "theme": {
+    "type": "Dark",
+    "accent": "#f7995e",
+    "canvas": {
+      "bg": "#212032",
+      "grid": "#302f42"
+    },
+    "panel": {
+      "bg": "#100e1c",
+      "opacity": 0.75,
+      "border": "#302f42",
+      "border_opacity": 1.0,
+      "blur": 10.0
+    },
+    "panel_shadow_opacity": 0.35,
+    "modal": {
+      "bg": "#100e1c",
+      "opacity": 1.0,
+      "border": "#302f42",
+      "border_opacity": 1.0
+    },
+    "shadow": {
+      "modal_blur": 50.0,
+      "floating_blur": 34.0,
+      "floating_x": 0.0,
+      "floating_y": 12.0,
+      "dock_x": 2.0,
+      "dock_y": 0.0,
+      "dock_blur": 12.0,
+      "modal_x": 0.0,
+      "modal_y": 16.0
+    },
+    "toolbar": {
+      "bg": "#201d31"
+    },
+    "floating": {
+      "opacity": 1.0,
+      "border": "#302f42",
+      "border_opacity": 1.0
+    },
+    "field": {
+      "bg": "#151323",
+      "border": "#302f42",
+      "hover_bg": "#ffffff"
+    },
+    "text": {
+      "primary": "#e1e2e9",
+      "secondary": "#b3bacb",
+      "muted": "#7f849c",
+      "active": "#f7995e"
+    },
+    "button": {
+      "bg": "#302f42",
+      "bg_opacity": 0.0,
+      "border_idle": "#302f42",
+      "hover_bg": "#ffffff",
+      "hover_bg_opacity": 0.1,
+      "border_hover": "#302f42",
+      "active_bg": "#f7995e",
+      "active_bg_opacity": 0.1,
+      "border_active": "#3e2a29",
+      "danger_fg": "#a6adc8",
+      "danger_border_idle": "#a6adc8",
+      "danger_hover_bg": "#e81123",
+      "danger_border_hover": "#e81123",
+      "shadow_opacity": 0.15,
+      "idle_fg": "#b3bacb",
+      "active_fg": "#f7995e",
+      "danger_active_bg": "#eba0ac",
+      "danger_hover_fg": "#ffffff",
+      "danger_active_fg": "#ffffff"
+    },
+    "handle": {
+      "handle_color": "#f7995e",
+      "handle_border": "#212032",
+      "selection_width": 1.0
+    },
+    "slider": {
+      "active_bg": "#f7995e",
+      "thumb_bg": "#ffffff",
+      "thumb_radius": 999.0
+    },
+    "switch": {
+      "active_bg": "#f7995e"
+    },
+    "scrollbar": {
+      "track": "#100e1c",
+      "thumb": "#5a5f78",
+      "thumb_hover": "#747a96"
+    },
+    "name": "Duckx Dark",
+    "border": "#302f42",
+    "titlebar": {
+      "button_hover_bg": "#302f42"
+    },
+    "overlay": {
+      "color": "#04070c",
+      "backdrop_opacity": 0.44
+    },
+    "snackbar": {
+      "bg": "#201d31"
+    }
+  }
+}
