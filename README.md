@@ -1,3 +1,5 @@
+![image](screenshot.png)
+
 # 🎨 Duckx Canvas
 
 **Duckx Canvas** is a high-performance, GPU-accelerated infinite canvas and graphic editor. Built with **Rust** and powered by **GPUI** (the modern GPU-accelerated UI framework from the creators of Zed Editor), Duckx Canvas is designed to be lightweight, responsive, and aesthetically stunning.
