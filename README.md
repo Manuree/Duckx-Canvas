@@ -79,12 +79,6 @@ The application follows the **Floating Island UI** design concept, providing a p
 
 You can install Duckx Canvas instantly using our one-line installer scripts.
 
-### 🍎 macOS & 🐧 Linux (via curl)
-Run the following command in your terminal:
-```bash
-curl -fsSL https://raw.githubusercontent.com/Manuree/Duckx-Canvas/main/install.sh | bash
-```
-
 ### 🪟 Windows (via PowerShell or curl)
 Open PowerShell and run:
 ```powershell
