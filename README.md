@@ -51,3 +51,102 @@ The application follows the **Floating Island UI** design concept, providing a p
 *   **RFD (Rust File Dialogs)** — System native file pickers.
 *   **Windows Sys** — Low-level OS window behavior integrations (Topmost, Click-through, Focus).
 
+---
+
+## 📂 Codebase Architecture
+
+```
+📂 src
+ ├── 📂 canvas_app/        # Core canvas state, history, selection, and tools
+ │    ├── mod.rs
+ │    ├── history.rs      # Undo/Redo & state snapshots
+ │    ├── io.rs           # Opening, saving, and managing .duckx documents
+ │    ├── render.rs       # Main UI tree and rendering logic
+ │    ├── selection.rs    # Raycasting, hit-testing, z-ordering, and transform dragging
+ │    ├── theme.rs        # Live theme parameters and color sync controls
+ │    └── tools.rs        # Toolbar active-tool drawing and placement handlers
+ ├── 📂 components/        # Reusable design system UI components (Buttons, Panels, Sliders)
+ ├── 📂 platform/          # Platform-specific OS API bindings (Windows-native tweaks)
+ ├── main.rs              # App entry point, action bindings, and focus handlers
+ ├── duckx.rs             # Archive packaging logic for .duckx file format
+ ├── pip_window.rs        # Secondary Picture-in-Picture window renderer
+ └── app_settings.rs      # Persistent user settings manager
+```
+
+---
+
+## 📥 Installation
+
+You can install Duckx Canvas instantly using our one-line installer scripts.
+
+### 🍎 macOS & 🐧 Linux (via curl)
+Run the following command in your terminal:
+```bash
+curl -fsSL https://raw.githubusercontent.com/Manuree/Duckx-Canvas/main/install.sh | bash
+```
+
+### 🪟 Windows (via PowerShell or curl)
+Open PowerShell and run:
+```powershell
+irm https://raw.githubusercontent.com/Manuree/Duckx-Canvas/main/install.ps1 | iex
+```
+*Or via standard cmd/git-bash using curl:*
+```cmd
+curl.exe -sSfL https://raw.githubusercontent.com/Manuree/Duckx-Canvas/main/install.ps1 -o install.ps1 && powershell -ExecutionPolicy Bypass -File install.ps1 && del install.ps1
+```
+
+---
+
+## 🛠️ GitHub Release & Actions Setup
+
+To enable automated release builds and binary hosting:
+
+1. **Commit and Push the Repository Configs:**
+   Push the codebase including the `.github/workflows/release.yml`, `install.sh`, and `install.ps1` to your GitHub repository `Manuree/Duckx-Canvas`.
+
+2. **Triggering a Release Build:**
+   The release workflow is automatically triggered when you push a version tag (e.g., `v0.1.0`):
+   ```bash
+   git tag v0.1.0
+   git push origin v0.1.0
+   ```
+   GitHub Actions will automatically spin up Windows, macOS, and Ubuntu runners, compile the code in release mode, and create a GitHub Release with the packaged binaries:
+   - `duckx-canvas-windows-x64.zip`
+   - `duckx-canvas-macos-universal.zip` (Universal binary for both Apple Silicon and Intel)
+   - `duckx-canvas-linux-x64.tar.gz`
+
+3. **Installer Auto-Redirection:**
+   The installation scripts download from the `releases/latest/download` endpoint, so they will always download the compiled binary from the latest published release.
+
+---
+
+## 🚀 Getting Started
+
+### 📋 Prerequisites
+1.  Install the latest stable **Rust toolchain** from [rustup.rs](https://rustup.rs/).
+2.  (For Windows) Build environment with C++ build tools (MSVC SDK) installed.
+
+### 📦 Run Instructions
+
+Run the application in Debug mode:
+```bash
+cargo run
+```
+
+Run in Release mode (optimized performance):
+```bash
+cargo run --release
+```
+
+---
+
+## 🎨 Developer & UI Guidelines
+
+If you want to contribute or build additional UI features, please adhere to the specs in [Design.md](Design.md):
+1.  **Component-First Architecture:** Avoid writing hard-coded inline layouts in core views. Create or extend components inside `src/components/` instead.
+2.  **Strict Token Adherence:** Retrieve colors, shadows, and margins from theme JSON files (`duckx-light.json` / `duckx-dark.json`) using Appearance controls rather than hard-coding raw values.
+3.  **Unified Button Rule:** Use the generic builder-pattern `Button` layouts to ensure consistent hover, active, clicked, and disabled states.
+
+---
+
+⭐ **Duckx Canvas** is built for extreme lightweight speed, premium aesthetics, and responsive layout designs!
