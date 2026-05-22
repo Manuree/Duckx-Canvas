@@ -2,7 +2,7 @@
 $ErrorActionPreference = 'Stop'
 
 Write-Host "=======================================" -ForegroundColor Blue
-Write-Host "   🎨 Installing Duckx Canvas...       " -ForegroundColor Cyan
+Write-Host "    Installing Duckx Canvas...       " -ForegroundColor Cyan
 Write-Host "=======================================" -ForegroundColor Blue
 
 $Repo = "Manuree/Duckx-Canvas"
