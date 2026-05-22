@@ -2,7 +2,7 @@
 $ErrorActionPreference = 'Stop'
 
 Write-Host "=======================================" -ForegroundColor Blue
-Write-Host "        Installing Duckx Canvas...       " -ForegroundColor Cyan
+Write-Host "   🎨 Installing Duckx Canvas...       " -ForegroundColor Cyan
 Write-Host "=======================================" -ForegroundColor Blue
 
 $Repo = "Manuree/Duckx-Canvas"
@@ -22,6 +22,7 @@ Invoke-RestMethod -Uri $Url -OutFile $ZipFile
 
 Write-Host "-> Extracting package..." -ForegroundColor White
 Expand-Archive -Path $ZipFile -DestinationPath $TempDir -Force
+Remove-Item -Path $ZipFile -Force
 
 if (-not (Test-Path $InstallDir)) {
     $null = New-Item -ItemType Directory -Force -Path $InstallDir

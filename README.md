@@ -69,6 +69,25 @@ curl.exe -sSfL https://raw.githubusercontent.com/Manuree/Duckx-Canvas/main/insta
 ```
 
 ---
+### 🗑️ Uninstallation
 
+If you wish to remove Duckx Canvas:
+
+#### Windows (PowerShell):
+Run this command in PowerShell to clean up everything automatically:
+```powershell
+irm https://raw.githubusercontent.com/Manuree/Duckx-Canvas/main/uninstall.ps1 | iex
+```
+or
+
+```Remove-Item -Recurse -Force "$HOME\.duckx-canvas"
+Remove-Item -Force "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Duckx Canvas.lnk"
+$InstallDir = Join-Path $HOME ".duckx-canvas\bin"
+$UserPath = [Environment]::GetEnvironmentVariable("PATH", "User")
+$NewPath = ($UserPath -split ";" | Where-Object { $_ -ne $InstallDir }) -join ";"
+[Environment]::SetEnvironmentVariable("PATH", $NewPath, "User")
+```
+
+---
 
 
