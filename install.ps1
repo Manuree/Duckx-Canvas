@@ -2,7 +2,7 @@
 $ErrorActionPreference = 'Stop'
 
 Write-Host "=======================================" -ForegroundColor Blue
-Write-Host "    Installing Duckx Canvas...       " -ForegroundColor Cyan
+Write-Host "        Installing Duckx Canvas...       " -ForegroundColor Cyan
 Write-Host "=======================================" -ForegroundColor Blue
 
 $Repo = "Manuree/Duckx-Canvas"
@@ -27,8 +27,8 @@ if (-not (Test-Path $InstallDir)) {
     $null = New-Item -ItemType Directory -Force -Path $InstallDir
 }
 
-Write-Host "-> Installing executable to $InstallDir..." -ForegroundColor White
-Copy-Item -Path (Join-Path $TempDir "duckx-canvas.exe") -Destination (Join-Path $InstallDir "duckx-canvas.exe") -Force
+Write-Host "-> Installing files to $InstallDir..." -ForegroundColor White
+Copy-Item -Path (Join-Path $TempDir "*") -Destination $InstallDir -Recurse -Force
 
 # Clean up temp folder
 Remove-Item -Recurse -Force $TempDir
