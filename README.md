@@ -70,27 +70,5 @@ curl.exe -sSfL https://raw.githubusercontent.com/Manuree/Duckx-Canvas/main/insta
 
 ---
 
-## 🛠️ GitHub Release & Actions Setup
-
-To enable automated release builds and binary hosting:
-
-1. **Commit and Push the Repository Configs:**
-   Push the codebase including the `.github/workflows/release.yml`, `install.sh`, and `install.ps1` to your GitHub repository `Manuree/Duckx-Canvas`.
-
-2. **Triggering a Release Build:**
-   The release workflow is automatically triggered when you push a version tag (e.g., `v0.1.0`):
-   ```bash
-   git tag v0.1.0
-   git push origin v0.1.0
-   ```
-   GitHub Actions will automatically spin up Windows, macOS, and Ubuntu runners, compile the code in release mode, and create a GitHub Release with the packaged binaries:
-   - `duckx-canvas-windows-x64.zip`
-   - `duckx-canvas-macos-universal.zip` (Universal binary for both Apple Silicon and Intel)
-   - `duckx-canvas-linux-x64.tar.gz`
-
-3. **Installer Auto-Redirection:**
-   The installation scripts download from the `releases/latest/download` endpoint, so they will always download the compiled binary from the latest published release.
-
----
 
 
