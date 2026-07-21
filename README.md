@@ -42,6 +42,13 @@ The application follows the **Floating Island UI** design concept, providing a p
 ### 💾 5. Native Save Format (`.duckx`)
 *   Saves workspaces in a structured, compressed zip package storing the Canvas state, local fonts, configurations, and extracted image assets in one portable file.
 
+### 🧩 6. Node-Based Compositing Editor
+*   **Visual Node Graph:** Place and wire up processing nodes directly on the infinite canvas. Drag connections between input/output sockets, with wired values always overriding a node's own body fields, and multi-input sockets (rendered as squares) that accept more than one incoming connection.
+*   **Image Processing Nodes:** `Image Input`/`Image Output` (with live preview and optional auto-save), `Channels` (split/combine RGBA), `Resize Image`, `RGB` (constant colour source with a live swatch), `HSL`, `Levels`, `Threshold`, `Filters` (Emboss, Box/Gaussian Blur, Sharpen, Sobel, Laplace, Prewitt, Noise Reduction, Edge One/Detection), `Invert`, `Blending Effect` (12 photon-rs blend modes), and `Mix` (uniform factor blend or per-pixel image-mask blend, à la Blender's Mix node).
+*   **Math & Utility Nodes:** `Math` (add/subtract/multiply/divide), `Vector XY`, `Sum` (totals any number of connected values), `Logic Node`, and `Node Group`.
+*   **Incremental Graph Evaluation:** A topologically scheduled, cache-invalidated engine recomputes only the affected subgraph on each change, with background-threaded preview baking for `Image Output` sinks.
+*   Node graphs are saved and restored as part of the native `.duckx` format.
+
 ---
 
 ## 🛠️ Technology Stack
