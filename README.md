@@ -126,18 +126,6 @@ irm https://raw.githubusercontent.com/Manuree/Duckx-Canvas/main/install.ps1 | ie
 curl.exe -sSfL https://raw.githubusercontent.com/Manuree/Duckx-Canvas/main/install.ps1 -o install.ps1 && powershell -ExecutionPolicy Bypass -File install.ps1 && del install.ps1
 ```
 
-### 🍎 macOS / 🐧 Linux
-```bash
-curl -sSfL https://raw.githubusercontent.com/Manuree/Duckx-Canvas/main/install.sh | bash
-```
-*macOS:* universal binary zip · *Linux:* `x86_64` tar.gz from GitHub Releases.
-
-### 🔧 Build from Source
-```bash
-cargo build --release
-cargo run --release
-```
-
 ---
 ### 🗑️ Uninstallation
 
